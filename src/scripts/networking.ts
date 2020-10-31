@@ -1,5 +1,5 @@
 
-class Router{
+export class Router{
     private conn: WebSocket
     private url: string
     private id: number = -1
@@ -81,35 +81,35 @@ class Router{
     }
 }
 
-enum NetworkIds{
+export enum NetworkIds{
     /*Enum of reserved addresses*/
     LOCAL = 0,
     HOST = 1
 }
 
-enum Channels{
+export enum Channels{
     /*Enum of general channels*/
     NETWORKING = 0,
     LOGGING = 1
 }
 
-enum NetworkingTypes{
+export enum NetworkingTypes{
     /*Enum of message types for the networking channel*/
     ID_ASSIGN = 0
 }
 
-interface HandlerDict{
+export interface HandlerDict{
     [key: number]: (message: Message) => void
 }
 
-interface Header{
+export interface Header{
     source: number
     destination: number
     channel: number
     type: number
 }
 
-interface Message{
+export interface Message{
     header: Header
     [key: string]: any
 }

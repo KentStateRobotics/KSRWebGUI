@@ -1,5 +1,4 @@
-"use strict";
-class Router {
+export class Router {
     constructor(url) {
         this.id = -1;
         this.handlers = {};
@@ -73,19 +72,19 @@ class Router {
         console.error(event);
     }
 }
-var NetworkIds;
+export var NetworkIds;
 (function (NetworkIds) {
     /*Enum of reserved addresses*/
     NetworkIds[NetworkIds["LOCAL"] = 0] = "LOCAL";
     NetworkIds[NetworkIds["HOST"] = 1] = "HOST";
 })(NetworkIds || (NetworkIds = {}));
-var Channels;
+export var Channels;
 (function (Channels) {
     /*Enum of general channels*/
     Channels[Channels["NETWORKING"] = 0] = "NETWORKING";
     Channels[Channels["LOGGING"] = 1] = "LOGGING";
 })(Channels || (Channels = {}));
-var NetworkingTypes;
+export var NetworkingTypes;
 (function (NetworkingTypes) {
     /*Enum of message types for the networking channel*/
     NetworkingTypes[NetworkingTypes["ID_ASSIGN"] = 0] = "ID_ASSIGN";

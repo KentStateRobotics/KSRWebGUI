@@ -3,7 +3,6 @@
         "target": "ESNext",
         "watch": true,
         "lib": ["DOM", "ES2019"],
-        "outDir": "js",
         "strict": true
     }
 }
